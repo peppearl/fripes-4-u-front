@@ -1,5 +1,5 @@
 {
-  "name": "eval-front",
+  "name": "fripes-4-u",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.4",
     "next": "12.1.4",
+    "postcss": "^8.4.12",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "tailwindcss": "^3.0.23"
   },
   "devDependencies": {
     "eslint": "8.12.0",
