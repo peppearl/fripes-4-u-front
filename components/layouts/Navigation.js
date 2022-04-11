@@ -51,22 +51,22 @@ export default function Navigation() {
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="clothes/tops" passHref>
+                                <Link href="/clothes/tops" passHref>
                                     <a>Tops</a>
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="clothes/jupes" passHref>
+                                <Link href="/clothes/jupes" passHref>
                                     <a>Jupes</a>
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="clothes/chaussures" passHref>
+                                <Link href="/clothes/chaussures" passHref>
                                     <a>Chaussures</a>
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="clothes/accessoires" passHref>
+                                <Link href="/clothes/accessoires" passHref>
                                     <a>Accessoires</a>
                                 </Link>
                             </li>
