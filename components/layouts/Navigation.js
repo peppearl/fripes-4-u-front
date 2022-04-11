@@ -6,7 +6,7 @@ export default function Navigation() {
     return (
         <header>
             <div className="flex px-4 py-8 items-center justify-between h-40">
-                <div className="flex items-center mb-10">
+                <div className="flex items-center mb-10 flex-1">
                     <div>
                         <div className="text-base font-link">
                             <Link href="/about" passHref>
@@ -71,13 +71,13 @@ export default function Navigation() {
                     </nav>
                 </div>
                 <div className="mb-10 flex justify-center">
-                    <h1 className="w-29%">
+                    <span className="w-29%">
                         <Link href="/" passHref>
                             <a><Image src={logo} alt="Fripes 4 u"/></a>
                         </Link>
-                    </h1>
+                    </span>
                 </div>
-                <div className="flex items-center mb-10 justify-end">
+                <div className="flex items-center mb-10 justify-end flex-1">
                     <Link href="/search" passHref>
                         <a className="inline-block leading-none" data-action="toggle-search" aria-label="Recherche">
                             <svg className="relative top-0.5 w-5 h-5" role="presentation" viewBox="0 0 21 21">
@@ -90,8 +90,8 @@ export default function Navigation() {
                         </a>
                     </Link>
                     <Link href="/compte" passHref>
-                        <a className="inline-block leading-none ml-6" data-action="toggle-search"
-                           aria-label="Recherche">
+                        <a className="inline-block leading-none ml-6"
+                           aria-label="Compte">
                             <svg className="relative top-0.5 w-5 h-5" role="presentation" viewBox="0 0 20 20">
                                 <g transform="translate(1 1)" stroke="currentColor" strokeWidth="2" fill="none"
                                    fillRule="evenodd" strokeLinecap="square">
@@ -102,14 +102,10 @@ export default function Navigation() {
                             </svg>
                         </a>
                     </Link>
-                    <Link href="/panier" passHref>
-                        <a className="inline-block leading-none ml-6" data-action="toggle-search"
-                           aria-label="Recherche">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.6 148.3"
-                                 className="relative top-0.5 w-5 h-5" role="presentation" stroke="currentColor">
-                                <path className="fill-rouge" d="M104.3,35.3C100.5,15.2,83.8,0,63.8,0S27,15.2,23.3,35.3H0v113h127.6v-113H104.3z M63.8,7.8
-	c15.8,0,29,11.8,32.5,27.5H31.2C34.8,19.5,48,7.8,63.8,7.8z"></path>
-                            </svg>
+                    <Link href="/messages" passHref>
+                        <a className="inline-block leading-none ml-6 font-link"
+                           aria-label="Messages">
+                            <p>Messages</p>
                         </a>
                     </Link>
                 </div>
