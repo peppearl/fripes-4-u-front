@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-export default function TeeShirt({clothe}) {
+export default function Accessoire({clothe}) {
     return (
         <div className="m-50auto max-w-7xl flex flex-row">
             <div className="pt-14 pl-14 mx-40">
