@@ -1,5 +1,6 @@
 import Default from "../components/layouts/Default";
 import Login from "../components/layouts/Login";
+import Profil from "../components/layouts/Profil";
 import {useUser} from "../contexts/UserContext";
 
 export default function Home() {
@@ -9,10 +10,7 @@ export default function Home() {
         <Default>
             {!user && <Login/>}
             {user !== null &&
-                <div>
-                    <p>Bonjour {user}</p>
-                    <button onClick={logOut}>Se déconnecter</button>
-                </div>
+                <Profil/>
             }
         </Default>
       </div>
