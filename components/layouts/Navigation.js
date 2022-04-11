@@ -2,8 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../img/fripes4u.png'
 import styles from "../../styles/Home.module.css";
+import {useUser} from "../../contexts/UserContext";
 
 export default function Navigation() {
+    const {user} = useUser()
     return (
         <header className={styles.container}>
             <div className="flex px-4 py-8 items-center justify-between h-40">
@@ -24,7 +26,7 @@ export default function Navigation() {
                     <nav className="absolute top-28 left-0 pb-4 text-center w-full font-nav">
                         <ul className="mx-0">
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="/" passHref>
+                                <Link href="clothes/all" passHref>
                                     <a>Accueil</a>
                                 </Link>
                             </li>
@@ -79,15 +81,11 @@ export default function Navigation() {
                     </span>
                 </div>
                 <div className="flex items-center mb-10 justify-end flex-1">
-                    <Link href="/search" passHref>
-                        <a className="inline-block leading-none" data-action="toggle-search" aria-label="Recherche">
-                            <svg className="relative top-0.5 w-5 h-5" role="presentation" viewBox="0 0 21 21">
-                                <g transform="translate(1 1)" stroke="currentColor" strokeWidth="2" fill="none"
-                                   fillRule="evenodd" strokeLinecap="square">
-                                    <path d="M18 18l-5.7096-5.7096"></path>
-                                    <circle cx="7.2" cy="7.2" r="7.2"></circle>
-                                </g>
-                            </svg>
+                    <Link href="/vendre" passHref>
+                        <a className="inline-block leading-none ml-6 font-link" aria-label="Recherche">
+                            {user !== null &&
+                                <p>Vendre un article</p>
+                            }
                         </a>
                     </Link>
                     <Link href="/compte" passHref>
