@@ -1,17 +1,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../img/fripes4u.png'
-import Search from '../../img/search.svg'
+import styles from "../../styles/Home.module.css";
 
 export default function Navigation() {
     return (
-        <header>
+        <header className={styles.container}>
             <div className="flex px-4 py-8 items-center justify-between h-40">
                 <div className="flex items-center mb-10 flex-1">
                     <div>
                         <div className="text-base font-link">
-                            <Link href="/about" passHref>
-                                <a className="inline-block px-2.5">About</a>
+                            <Link href="/a-propos" passHref>
+                                <a className="inline-block px-2.5">A propos</a>
                             </Link>
                             <Link href="/contact" passHref>
                                 <a className="inline-block px-2.5">Contact</a>
@@ -29,7 +29,7 @@ export default function Navigation() {
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="/tee-shirt" passHref>
+                                <Link href="/clothes/tee-shirt" passHref>
                                     <a>Tee-Shirt</a>
                                 </Link>
                             </li>
