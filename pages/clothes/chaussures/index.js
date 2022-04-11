@@ -1,6 +1,6 @@
 import Default from "../../../components/layouts/Default";
 import axios from "axios"
-import Clothes from "../../../components/clothes/all";
+import Chaussures from "../../../components/clothes/chaussures";
 
 export default function Shoes({clothes}) {
     return (
@@ -10,7 +10,7 @@ export default function Shoes({clothes}) {
                     <header className="p-14">
                         <h1 className="text-center text-3xl font-link">Chaussures</h1>
                     </header>
-                    <Clothes clothes={clothes}/>
+                    <Chaussures clothes={clothes}/>
                 </section>
             </Default>
         </div>

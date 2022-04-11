@@ -1,7 +1,7 @@
 import Default from "../../../../components/layouts/Default";
 import {useRouter} from "next/router";
 import axios from "axios";
-import Clothe from "../../../../components/clothes/all/Clothe";
+import Jupe from "../../../../components/clothes/jupes/Jupe";
 
 export default function IdJupe({clothe}) {
     const rooter = useRouter();
@@ -9,7 +9,7 @@ export default function IdJupe({clothe}) {
         <div>
             <Default>
                 <section className="bg-beige w-full">
-                    <Clothe clothe={clothe}/>
+                    <Jupe clothe={clothe}/>
                 </section>
             </Default>
         </div>

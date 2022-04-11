@@ -1,6 +1,6 @@
 import Default from "../../../components/layouts/Default";
 import axios from "axios";
-import Clothes from "../../../components/clothes/all";
+import Pulls from "../../../components/clothes/pulls";
 
 export default function Pullovers({clothes}) {
     return (
@@ -10,7 +10,7 @@ export default function Pullovers({clothes}) {
                     <header className="p-14">
                         <h1 className="text-center text-3xl font-link">Pulls</h1>
                     </header>
-                    <Clothes clothes={clothes}/>
+                    <Pulls clothes={clothes}/>
                 </section>
             </Default>
         </div>

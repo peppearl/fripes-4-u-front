@@ -1,15 +1,17 @@
 import Default from "../../../../components/layouts/Default";
 import {useRouter} from "next/router";
 import axios from "axios";
-import Clothe from "../../../../components/clothes/all/Clothe";
+import TeeShirt from "../../../../components/clothes/tee-shirt/TeeShirt";
 
 export default function IdTeeShirt({clothe}) {
+    console.log("test")
     const rooter = useRouter();
+
     return (
         <div>
             <Default>
                 <section className="bg-beige w-full">
-                    <Clothe clothe={clothe}/>
+                    <TeeShirt clothe={clothe}/>
                 </section>
             </Default>
         </div>
