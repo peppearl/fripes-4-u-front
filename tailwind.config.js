@@ -9,6 +9,9 @@ module.exports = {
             'nav': ['"Trocchi","serif"'],
             'text': ['"Arima Madurai","cursive"'],
         },
+        minHeight: {
+            '75': '75px',
+        },
         extend: {
             width: {
                 '29%': '29%',
@@ -24,6 +27,8 @@ module.exports = {
             margin: {
                 'auto': '0 auto',
                 '35auto': '35px auto',
+                '6minus': '-6px',
+                '50auto': '0 auto 50px auto',
             },
             inset: {
               'ex': 'calc(100% + 5px);'
