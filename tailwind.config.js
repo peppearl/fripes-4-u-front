@@ -7,6 +7,7 @@ module.exports = {
         fontFamily: {
             'link': ['"Spicy Rice","cursive"'],
             'nav': ['"Trocchi","serif"'],
+            'text': ['"Arima Madurai","cursive"'],
         },
         extend: {
             width: {
@@ -14,9 +15,18 @@ module.exports = {
             },
             colors: {
                 'rouge': '#ce3202',
+                'beige': '#f6efe6',
+                'rose': '#f0d3c4',
             },
             boxShadow: {
                 'xs': '0 -1px rgb(240, 118, 185) inset',
+            },
+            margin: {
+                'auto': '0 auto',
+                '35auto': '35px auto',
+            },
+            inset: {
+              'ex': 'calc(100% + 5px);'
             },
         },
     },
