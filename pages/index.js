@@ -1,5 +1,5 @@
 import Default from "../components/layouts/Default";
-import Login from "./Login";
+import Login from "../components/layouts/Login";
 
 export default function Home() {
   return (
