@@ -1,25 +1,8 @@
 import React from 'react';
-import Link from 'next/link';
 import {useUser} from "../../contexts/UserContext";
-import {useForm} from "react-hook-form";
-import axios from "axios";
-import Router from "next/router";
 
 export default function Profil() {
     const {user, logOut} = useUser()
-
-    const {register, handleSubmit, formState: {errors}} = useForm();
-    const onSubmit = data => {
-        axios
-            .post("http://localhost:3000/users", data)
-            .then((response) => {
-                if (response.data.errmessage) {
-                    this.errmessage = response.data.errmessage
-                } else {
-                    Router.push('/')
-                }
-            });
-    }
 
     return (
         <div>
