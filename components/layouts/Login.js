@@ -1,11 +1,23 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
 import Link from 'next/link';
+import {useUser} from "../../contexts/UserContext";
+const axios = require('axios');
 
 export default function Login() {
-    const {register, handleSubmit, formState: {errors}} = useForm();
-    const onSubmit = data => console.log(data);
-    console.log(errors);
+    const {setToken, token} = useUser();
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = data => {
+        axios
+            .post("http://localhost:3000/auth/login", data)
+            .then((response) => {
+                if(response.data.errmessage){
+                    this.errmessage=response.data.errmessage
+                } else {
+                    setToken(response.data.access_token)
+                }});
+    }
+
     return (
         <div>
             <section className="pt-5 pb-52">

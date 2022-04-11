@@ -1,11 +1,22 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
 import Link from 'next/link';
+import axios from "axios";
+import Router from 'next/router'
 
 export default function SignUp() {
-    const {register, handleSubmit, formState: {errors}} = useForm();
-    const onSubmit = data => console.log(data);
-    console.log(errors);
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = data => {
+        axios
+            .post("http://localhost:3000/users", data)
+            .then((response) => {
+                if(response.data.errmessage){
+                    this.errmessage=response.data.errmessage
+                } else {
+                    Router.push('/')
+                }});
+    }
+
     return (
         <div>
             <section className="pt-5 pb-52">

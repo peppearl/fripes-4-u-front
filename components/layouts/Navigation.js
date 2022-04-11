@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../img/fripes4u.png'
+import Search from '../../img/search.svg'
 
 export default function Navigation() {
     return (
