@@ -1,29 +1,29 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
-import Link from 'next/link';
 import axios from "axios";
-import Router from 'next/router'
 import {useUser} from "../../contexts/UserContext";
 
 export default function Sell() {
-    const {token} = useUser()
-    const {register, handleSubmit, formState: {errors}} = useForm();
 
-    const onSubmit = data => {
-        axios
-            .post("http://localhost:3000/clothes", data, {
-                headers: {
-                    Authorization: 'Bearer ' + token
+    const { token } = useUser()
+    const { register,handleSubmit, formState: { errors } } = useForm();
+
+    const onSubmit = (data) => {
+        axios.post('http://localhost:3000/clothes', data, {
+            headers: {
+                Authorization: 'Bearer ' + token
+            }
+        })
+            .then((res) => {
+                console.log(res)
+                if (res.data.errmessage) {
+                    alert('Error')
+                    console.log(errors);
+                } else {
+                    alert('Product created')
                 }
             })
-            .then((response) => {
-                if (response.data.errmessage) {
-                    this.errmessage = response.data.errmessage
-                } else {
-                    Router.push('/clothes/all')
-                }
-            });
-    }
+    };
 
 
     return (
