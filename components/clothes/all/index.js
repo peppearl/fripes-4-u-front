@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link';
 
-export default function AllClothes({clothes}) {
+export default function Clothes({clothes}) {
     return (
         <div className="mt-14 flex">
             <div className="px-6 flex flex-row flex-wrap">

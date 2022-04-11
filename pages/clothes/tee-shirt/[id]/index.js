@@ -1,7 +1,7 @@
 import Default from "../../../../components/layouts/Default";
 import {useRouter} from "next/router";
 import axios from "axios";
-import TeeShirt from "../../../../components/clothes/tee-shirt/TeeShirt";
+import Clothe from "../../../../components/clothes/all/Clothe";
 
 export default function IdTeeShirt({clothe}) {
     const rooter = useRouter();
@@ -9,7 +9,7 @@ export default function IdTeeShirt({clothe}) {
         <div>
             <Default>
                 <section className="bg-beige w-full">
-                    <TeeShirt clothe={clothe}/>
+                    <Clothe clothe={clothe}/>
                 </section>
             </Default>
         </div>
