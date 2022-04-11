@@ -2,12 +2,13 @@ import Image from 'next/image'
 import Link from 'next/link';
 
 export default function TeeShirts({clothes}) {
+    //inline-flex
     return (
         <div className="mt-14 flex">
-            <div className="px-6">
+            <div className="px-6 flex flex-row flex-wrap">
                 {clothes.map(clothe => {
                     return (
-                        <div className="mb-14 align-top text-base border-rouge border-2 border-solid"
+                        <div className="mb-14 mr-14 align-top inline-block text-base border-rouge border-2 border-solid"
                              key={clothe.id}>
                             <Link href={`/clothes/tee-shirt/${clothe.id}`}>
                                 <a>
