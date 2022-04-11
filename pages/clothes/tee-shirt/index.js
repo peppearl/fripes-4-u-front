@@ -10,7 +10,7 @@ export default function Teeshirts({clothes}) {
                     <header className="p-14">
                         <h1 className="text-center text-3xl font-link">Tee-Shirts</h1>
                     </header>
-                    <TeeShirts clothes={clothes} />
+                    <TeeShirts clothes={clothes}/>
                 </section>
             </Default>
         </div>
@@ -33,7 +33,6 @@ export async function getStaticProps(context) {
             image: clothe.image
         }
     });
-    console.log(clot);
     return {
         props: {
             clothes: clot,
