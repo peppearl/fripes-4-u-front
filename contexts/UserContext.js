@@ -22,7 +22,6 @@ export default function UserContext({children}) {
                 Authorization: 'Bearer ' + token
             }
         }).then((response) => {
-            console.log(response.data);
             setUser(response.data.username);
             setRole(response.data.role);
         })

@@ -5,7 +5,7 @@ import styles from "../../styles/Home.module.css";
 import {useUser} from "../../contexts/UserContext";
 
 export default function Navigation() {
-    const {user} = useUser()
+    const {user, role} = useUser()
     return (
         <header className={styles.container}>
             <div className="flex px-4 py-8 items-center justify-between h-40">
@@ -26,7 +26,7 @@ export default function Navigation() {
                     <nav className="absolute top-28 left-0 pb-4 text-center w-full font-nav">
                         <ul className="mx-0">
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="clothes/all" passHref>
+                                <Link href="/clothes/all" passHref>
                                     <a>Accueil</a>
                                 </Link>
                             </li>
@@ -81,6 +81,13 @@ export default function Navigation() {
                     </span>
                 </div>
                 <div className="flex items-center mb-10 justify-end flex-1">
+                    <Link href="/admin/users" passHref>
+                        <a className="inline-block leading-none ml-6 font-link" aria-label="Admin">
+                            {user !== null && role === "admin" &&
+                                <p>Admin</p>
+                            }
+                        </a>
+                    </Link>
                     <Link href="/vendre" passHref>
                         <a className="inline-block leading-none ml-6 font-link" aria-label="Recherche">
                             {user !== null &&
