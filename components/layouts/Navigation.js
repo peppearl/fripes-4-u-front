@@ -36,37 +36,37 @@ export default function Navigation() {
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="/pull" passHref>
+                                <Link href="/clothes/pulls" passHref>
                                     <a>Pulls</a>
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="/jeans" passHref>
+                                <Link href="/clothes/jeans" passHref>
                                     <a>Jeans</a>
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="/robes" passHref>
+                                <Link href="/clothes/robes" passHref>
                                     <a>Robes</a>
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="/tops" passHref>
+                                <Link href="clothes/tops" passHref>
                                     <a>Tops</a>
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="/jupes" passHref>
+                                <Link href="clothes/jupes" passHref>
                                     <a>Jupes</a>
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="/chaussures" passHref>
+                                <Link href="clothes/chaussures" passHref>
                                     <a>Chaussures</a>
                                 </Link>
                             </li>
                             <li className="mx-5 inline-block my-1.5">
-                                <Link href="/accessoires" passHref>
+                                <Link href="clothes/accessoires" passHref>
                                     <a>Accessoires</a>
                                 </Link>
                             </li>
